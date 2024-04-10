@@ -1,0 +1,123 @@
+.detail {
+  margin-left: 80px;
+  justify-content: space-between;
+  margin-top: 8%;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.Col {
+  flex:1;
+  display: flex;
+  flex-direction: row;
+}
+
+.name {
+  margin-bottom: 0px;
+  color: #ffa200;
+  font-size: 40px;
+}
+
+.domain a{
+  font-size: 25px;
+  color: #ffa200;
+  text-decoration: none;
+}
+
+
+.typewriter-text {
+  display: inline-block;
+  overflow: hidden; 
+  border-right: 0.08em solid #ffa200; 
+  color: #ffa200;
+  white-space: nowrap; 
+  margin: 0 auto; 
+  letter-spacing: 0.1em;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+      width: 0;
+  }
+  to {
+      width: 100%;
+  }
+}
+
+/* The cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+      border-color: transparent; /* Hides the cursor */
+  }
+  50% {
+      border-color: #ffa200; /* Shows the cursor */
+  }
+}
+
+.col h1 h2 {
+  margin-bottom: 5px;
+}
+
+.col p {
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+.images {
+  padding-left: 150px;
+  padding-right: 50px; 
+  margin-top: -70px; 
+}
+
+.images img {
+  width: 450px;
+}
+
+.rowbuttons {
+  padding-top: 10px;
+  display: flex;
+  justify-content: flex-start;
+  text-align: bottom;
+}
+
+.rowbuttons a {
+  display: flex;
+  align-items: center;
+  background-color: #ffa200;
+  border: 5px solid #ffa200;
+  padding: 5px;
+  margin-right: 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.rowbuttons a:hover,
+.rowbuttons a:active {
+  background-color: white;
+  color: #ffa200;
+}
+
+.resume span {
+  margin-right: 10px; 
+}
+
+.download-icon {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s; 
+}
+
+.rowbuttons a:hover .download-icon,
+.rowbuttons a:active .download-icon {
+  color: #ffa200; 
+}
