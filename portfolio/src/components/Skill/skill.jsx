@@ -1,14 +1,87 @@
-import '../../components/Skill/skill.css'
-import html from '../../assets/htmlicon.png'
-import css from '../../assets/cssicon.png'
-import javascript from '../../assets/javascript.gif'
-import react from '../../assets/react.gif'
-import java from '../../assets/java.gif'
-import express from '../../assets/express.png'
-import bootstrap from '../../assets/bootstrap.png'
-import mongo from '../../assets/mongo.png'
-import git from '../../assets/gitsmal.png'
+import '../../components/Skill/skill.css';
+import html from '../../assets/htmlicon.png';
+import css from '../../assets/cssicon.png';
+import javascript from '../../assets/javascript.gif';
+import react from '../../assets/react.gif';
+import java from '../../assets/java.gif';
+import express from '../../assets/exprs.png';
+import bootstrap from '../../assets/bootstrap.png';
+import mongo from '../../assets/mongo.png';
+import git from '../../assets/gitsmal.png';
+import React, { useEffect, useRef } from 'react';
+
 function Skill() {
+  const skillsRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+        ([entry]) => {
+            if (entry.isIntersecting) {
+                // Add the 'show' class to each skill element
+                const skillElements = entry.target.querySelectorAll('.skill');
+                skillElements.forEach((skillElement) => {
+                    skillElement.classList.add('show');
+                    
+                    // Animate progress bars
+                    const progressBars = skillElement.querySelectorAll('progress');
+                    progressBars.forEach((progressBar) => {
+                        const targetValue = parseInt(progressBar.getAttribute('value'), 10);
+                        progressBar.value = 0; // Start from 0
+
+                        const duration = 1500; 
+                        const startTime = performance.now();
+
+                        function animateProgress(timestamp) {
+                            const elapsed = timestamp - startTime;
+                            const progress = Math.min(elapsed / duration, 1);
+
+                            // Update the progress value
+                            progressBar.value = progress * targetValue;
+
+                            if (progress < 1) {
+                                requestAnimationFrame(animateProgress);
+                            }
+                        }
+
+                        requestAnimationFrame(animateProgress);
+                    });
+                });
+
+                // Add the 'show' class to text and image elements
+                const textElements = entry.target.querySelectorAll('.text-element');
+                textElements.forEach((textElement) => {
+                    textElement.classList.add('show');
+                });
+
+                const imageElements = entry.target.querySelectorAll('.image-element');
+                imageElements.forEach((imageElement) => {
+                    imageElement.classList.add('show');
+                });
+
+                // Stop observing the target after adding 'show' classes
+                observer.unobserve(entry.target);
+            }
+        },
+        {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5,
+        }
+    );
+
+    if (skillsRef.current) {
+        observer.observe(skillsRef.current);
+    }
+
+    return () => {
+        if (skillsRef.current) {
+            observer.unobserve(skillsRef.current);
+        }
+    };
+}, []);
+
+
+
   return (
     <>
       <div className="skillheader">
@@ -16,50 +89,44 @@ function Skill() {
           <h1>My <span className="skillcolor">Skills</span></h1>
         </div>
       </div>
-      <div className="skills-section">
+      <div className="skills-section" ref={skillsRef}>
         <div className="skills-grid">
-          {/* Define each skill here */}
+          {/* Skill items */}
           <div className="skill">
             <div className="skill-icon">
-              <img src={html} alt="Skill 1" />
-              <img src={css} alt="Skill 2" />
+              <img src={html} alt="HTML Icon" />
+              <img src={css} alt="CSS Icon" />
               <p>HTML | CSS</p>
             </div>
-
             <div className="skill-progress">
-         
               <progress value="80" max="100"></progress>
-            
             </div>
           </div>
-          
+
           <div className="skill">
             <div className="skill-icon">
-            <img src={javascript} alt="Skill 2" />
-            <p>JavaScript</p>
+              <img src={javascript} alt="JavaScript Icon" />
+              <p>JavaScript</p>
             </div>
             <div className="skill-progress">
               <progress value="70" max="100"></progress>
-              
-            </div>
-          </div>
-          
-          {/* Repeat similar blocks for each skill */}
-          <div className="skill">
-            <div className="skill-icon">
-            <img src={java} alt="Skill 3" />
-            <p>Java</p>
-            </div>
-            <div className="skill-progress">
-              <progress value="90" max="100"></progress>
-             
             </div>
           </div>
 
           <div className="skill">
-            <div class="skill-icon">
-            <img src={react} alt="Skill 4" />
-            <p>React Native</p>
+            <div className="skill-icon">
+              <img src={java} alt="Java Icon" />
+              <p>Java</p>
+            </div>
+            <div className="skill-progress">
+              <progress value="90" max="100"></progress>
+            </div>
+          </div>
+
+          <div className="skill">
+            <div className="skill-icon">
+              <img src={react} alt="React Icon" />
+              <p>React</p>
             </div>
             <div className="skill-progress">
               <progress value="70" max="100"></progress>
@@ -67,23 +134,21 @@ function Skill() {
           </div>
         </div>
       </div>
-      <div className='subskills'>
-     
-      <div className='techskills'>
-          <h>Libraries and FrameWork</h>
-          <div className='subimgto'>
-          <img src={express} alt="Ski4" />
-          <img src={bootstrap} alt="Ski4" />
+      <div className="subskills">
+        <div className="techskills">
+          <h3>Libraries and Frameworks</h3>
+          <div className="subimgto">
+            <img src={express} alt="Express.js" title="Express.js" />
+            <img src={bootstrap} alt="Bootstrap" title="Bootstrap" />
           </div>
-      </div>
-      <div className='techskills'>
-          <h>Tools and Technologies</h>
-          <div className='subimgto'>
-          <img  src={mongo} alt="Ski4" />
-          <img src={git} alt="Ski4" />
+        </div>
+        <div className="techskills">
+          <h3>Tools and Technologies</h3>
+          <div className="subimgto">
+            <img src={mongo} alt="MongoDB" title="MongoDB" />
+            <img src={git} alt="Git" title="Git" />
           </div>
-      </div>
-  
+        </div>
       </div>
     </>
   );

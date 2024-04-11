@@ -1,22 +1,25 @@
+/* General styles */
 .skillheader {
-    padding-top: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 40px;
-    border-top: 2px solid #ffa200;
 }
 
 .title h1 {
-    font-size: 30px; 
-    text-align: center; 
-    padding-bottom: 30px;
+    font-size: 30px;
+    border-bottom: 2px solid #ffa200;
+    text-align: center;
+    padding-bottom: 0px;
 }
 
 .skillcolor {
-    color: #ffa200; 
+    color: #ffa200;
     font-weight: 800;
+    padding-bottom: 0px;
 }
+
+/* Skills section styles */
 .skills-section {
     width: 100%;
     display: flex;
@@ -25,70 +28,97 @@
 
 .skills-grid {
     display: grid;
-    width: auto;
-    grid-template-columns: repeat(3, 1fr); /* Two columns */
-    gap: 50px; /* Spacing between the skills */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
     row-gap: 20px;
 }
+.text-element,
+.image-element {
+    opacity: 0;
+    transition: opacity 1s ease-in-out; 
+}
+
+.text-element.show,
+.image-element.show {
+    opacity: 1; /* Show the element by changing opacity to 1 */
+}
+
 
 .skill {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%; 
+    width: 100%;
+    transition: transform 1s ease-in-out; /* Add transform transition for smoother appearance */
 }
-.skill-icon{
+
+.skill.show {
+    transform: translateY(5); /* Animate skill appearance */
+}
+
+.skill-icon {
     display: flex;
+    align-items: center;
 }
+
 .skill-icon img {
-    width: 50px; 
+    width: 50px;
     height: 50px;
 }
-.skill-icon p{
-    font-size: 20px;
 
+.skill-icon p {
+    font-size: 20px;
     padding-left: 10px;
+    opacity: 5; /* Initially hidden */
 }
-.skill-progress{
-    display: flex;
-    width:300px ;
-    color: #ffa200;
-    border-radius: 20px;
+
+.skill.show .skill-icon p {
+    opacity: 1; /* Fade in text */
+    transition: opacity 5s ease-in;
 }
-.skill-progress progress {
-    display: flex;
-    width: 100%; 
+
+/* Progress bar styles */
+/* Progress bar styles */
+.skill-progress {
+    width: 300px;
     height: 12px;
-    border-radius: 20px;
-    color: #ffa200;
-    background-color: #ffa200;
     margin: 10px 0;
 }
+
+.skill-progress progress {
+    width: 100%;
+    height: 12px;
+    border-radius: 20px;
+    transition: width 1s linear; /* Set a longer duration for a slow loading animation */
+}
+
 .skill-progress progress::-webkit-progress-bar {
-    background-color: #e0e0e0; 
+    background-color: #e0e0e0;
     border-radius: 20px;
 }
 
 .skill-progress progress::-webkit-progress-value {
-    background-color: #ffa200; 
+    background-color: #ffa200;
     border-radius: 20px;
 }
 
 .skill-progress progress::-moz-progress-bar {
-    background-color: #ffa200; 
+    background-color: #ffa200;
     border-radius: 20px;
 }
 
-.subskills{
-    padding-top:45px;
+
+/* Subskills section */
+.subskills {
+    padding-top: 45px;
     display: flex;
     flex-direction: row;
     gap: 30px;
     justify-content: center;
     align-items: center;
-    border-bottom: 2px solid #ffa200;
 }
-.sub{
+
+.sub {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -96,37 +126,54 @@
     width: 85%;
 }
 
-
-.techskills{
+.techskills {
     display: flex;
     align-items: center;
-    justify-content:center ;
+    justify-content: center;
     flex-direction: column;
     padding-top: 20px;
     width: 60%;
     font-size: 30px;
     font-weight: 500;
-   text-align: center;
+    text-align: center;
     color: #ffa200;
 }
-.techskills h{
-    border-bottom: 3px solid #ffa200
+
+.techskills h {
+    border-bottom: 3px solid #ffa200;
 }
-.techhead{
+.techskills h3{
+    font-size: 30px;
+    font-weight: 500;
+    border-bottom:2px solid #ffa200;
+}
+.techhead {
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
-.techskills img{
-    padding-bottom: 30px;
-    padding-right:25px;
-    padding-top: 30px;
+
+.techskills img {
+    padding-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    padding-right: 25px;
+     
+    padding-top: 10px;
 }
 
-.gitimg{
+.gitimg {
     width: 40px;
     height: 40px;
 }
-.subimgto{
-    gap:40px;
+.techicon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.subimgto {
+    gap: 40px;
+    justify-content: space-around;
+   flex-direction: column;
 }

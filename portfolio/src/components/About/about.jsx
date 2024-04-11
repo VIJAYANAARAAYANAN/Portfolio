@@ -8,8 +8,8 @@ import Col from 'react-bootstrap/Col';
 import '../../components/About/about.css';
 import shape from '../../assets/shape.png';
 import mypic from '../../assets/mypic.png';
-import '../About/typewriter'; // Import the typewriter script
-
+import boy from '../../assets/boy.png'
+import '../About/typewriter'; 
 function ContainerExample() {
     const [textIndex, setTextIndex] = useState(0);
     const texts = ['A Mern Stack Developer', 'A Full Stack Developer'];
@@ -26,7 +26,7 @@ function ContainerExample() {
         <Container className='detail'>
             <Row className="container">
                 <Col className='col'>
-                    <h1>Hello I'm</h1>
+                    <h1 className='hello'> Hello I'm</h1>
                     <h2 className="name">Vijay Naaraayanan</h2>
                     <h3 className='domain'>
                         <a href="" className="typewrite" data-period="2000" data-type='[ "A MERN Stack Developer", "A FullStack Developer"]'>
@@ -44,7 +44,9 @@ function ContainerExample() {
                 </Col>
                 <Col>
                     <div className='images'>
-                        <img src={shape} alt='imageshape' />
+                        <img className='orange' src={shape} alt='imageshape' />
+                        <img className='boy'   src={boy} alt="oby" />
+                        
                     </div>
                 </Col>
             </Row>

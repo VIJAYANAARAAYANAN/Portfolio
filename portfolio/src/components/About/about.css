@@ -16,6 +16,10 @@
   flex-direction: row;
   padding-bottom:30px;
 }
+.hello{
+  font-size: 28px;
+  font-weight: 550;
+}
 
 .name {
   margin-bottom: 0px;
@@ -74,10 +78,24 @@
   padding-left: 150px;
   padding-right: 50px; 
   margin-top: -70px; 
+  height: 500px;
 }
 
-.images img {
+.orange{
+  width: 550px;
+  right: 40px;
+  height: 500px;
+  position: relative;
+  bottom: -30px;
+
+}
+
+.boy{
+  position: relative;
+  bottom: 430px;
+  right: -30px;
   width: 450px;
+  height: 460px;
 }
 
 .rowbuttons {
@@ -124,4 +142,8 @@
 .rowbuttons a:hover .download-icon,
 .rowbuttons a:active .download-icon {
   color: #ffa200; 
+}
+
+.resume img{
+  background-color: transparent;
 }
