@@ -1,0 +1,13 @@
+.projheader {
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+.title h1 {
+    font-size: 30px; 
+    text-align: center; 
+    padding-bottom: 30px;
+}

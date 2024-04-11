@@ -7,12 +7,14 @@
 .container {
   display: flex;
   flex-direction: row;
+  padding-bottom: 30px;
 }
 
 .Col {
   flex:1;
   display: flex;
   flex-direction: row;
+  padding-bottom:30px;
 }
 
 .name {
@@ -52,7 +54,7 @@
 @keyframes blink-caret {
   from,
   to {
-      border-color: transparent; /* Hides the cursor */
+      border-color: #ffa200; 
   }
   50% {
       border-color: #ffa200; /* Shows the cursor */
@@ -83,6 +85,7 @@
   display: flex;
   justify-content: flex-start;
   text-align: bottom;
+  border-radius: 30px;
 }
 
 .rowbuttons a {
@@ -93,7 +96,7 @@
   padding: 5px;
   margin-right: 20px;
   font-size: 20px;
-  border-radius: 10px;
+  border-radius: 15px;
   color: white;
   text-decoration: none;
   transition: background-color 0.3s, color 0.3s;
@@ -107,6 +110,7 @@
 
 .resume span {
   margin-right: 10px; 
+  border-radius: 30px;
 }
 
 .download-icon {

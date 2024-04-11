@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@ionic/react": "^7.8.4",
+    "bootstrap": "^5.3.3",
+    "ionicons": "^7.3.1",
+    "react-bootstrap": "^2.10.2"
+  }
+}

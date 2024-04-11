@@ -12,7 +12,7 @@ import '../About/typewriter'; // Import the typewriter script
 
 function ContainerExample() {
     const [textIndex, setTextIndex] = useState(0);
-    const texts = ['A Mern Stack Developer', 'Full Stack Developer'];
+    const texts = ['A Mern Stack Developer', 'A Full Stack Developer'];
   
     useEffect(() => {
         const interval = setInterval(() => {
