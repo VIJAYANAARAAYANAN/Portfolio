@@ -1,0 +1,8 @@
+.mainthree{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.threebuttons {
+    background-color: #ffa200;
+}

@@ -26,6 +26,7 @@ function ContainerExample() {
         <Container className='detail'>
             <Row className="container">
                 <Col className='col'>
+                <div className='col1 slide-in-left'>
                     <h1 className='hello'> Hello I'm</h1>
                     <h2 className="name">Vijay Naaraayanan</h2>
                     <h3 className='domain'>
@@ -41,12 +42,15 @@ function ContainerExample() {
                         </a>
                         <a href="#">About Me</a>
                     </div>     
-                </Col>
+             
+             </div>   </Col>
                 <Col>
+                <div className='col1 slide-in-right'>
                     <div className='images'>
                         <img className='orange' src={shape} alt='imageshape' />
                         <img className='boy'   src={boy} alt="oby" />
                         
+                    </div>
                     </div>
                 </Col>
             </Row>

@@ -1,11 +1,21 @@
-/* General styles */
+@keyframes slideInTop {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 .skillheader {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 40px;
+    animation: slideInTop 1s ease-in-out forwards; 
 }
-
 .title h1 {
     font-size: 30px;
     border-bottom: 2px solid #ffa200;
@@ -29,8 +39,11 @@
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
-    row-gap: 20px;
+    gap:20px;
+    row-gap: 15px;
+    column-gap: 100px;
+    width: 80%;
+    height: 250px;
 }
 .text-element,
 .image-element {
@@ -40,7 +53,7 @@
 
 .text-element.show,
 .image-element.show {
-    opacity: 1; /* Show the element by changing opacity to 1 */
+    opacity: 1;
 }
 
 
@@ -49,13 +62,17 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    transition: transform 1s ease-in-out; /* Add transform transition for smoother appearance */
+    transform: translateY(20px); 
+    opacity: 0; 
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
 }
 
 .skill.show {
-    transform: translateY(5); /* Animate skill appearance */
+    transform: translateY(0); 
+    opacity: 1; 
+    height: auto;
+    margin-bottom: 0px;
 }
-
 .skill-icon {
     display: flex;
     align-items: center;
@@ -69,18 +86,17 @@
 .skill-icon p {
     font-size: 20px;
     padding-left: 10px;
-    opacity: 5; /* Initially hidden */
+    opacity: 5;  
 }
 
 .skill.show .skill-icon p {
-    opacity: 1; /* Fade in text */
+    opacity: 1;
     transition: opacity 5s ease-in;
 }
 
-/* Progress bar styles */
-/* Progress bar styles */
+
 .skill-progress {
-    width: 300px;
+    width: 105%;
     height: 12px;
     margin: 10px 0;
 }
@@ -89,7 +105,7 @@
     width: 100%;
     height: 12px;
     border-radius: 20px;
-    transition: width 1s linear; /* Set a longer duration for a slow loading animation */
+    transition: width 1s linear; 
 }
 
 .skill-progress progress::-webkit-progress-bar {
@@ -110,7 +126,7 @@
 
 /* Subskills section */
 .subskills {
-    padding-top: 45px;
+    
     display: flex;
     flex-direction: row;
     gap: 30px;
@@ -127,6 +143,7 @@
 }
 
 .techskills {
+
     display: flex;
     align-items: center;
     justify-content: center;

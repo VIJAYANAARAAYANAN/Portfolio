@@ -1,13 +1,110 @@
+.mainbox{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.next-btn , .back-btn{
+    position : absolute;
+    top:50%;
+    right: 0;
+    color : #fff;
+    transform: translateY(-50%);
+    padding: 15px;
+    width: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: #212ea0;
+}
+.back-btn{
+    right: auto;
+    left:0
+}
 .projheader {
     padding-top: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 40px;
+    padding-bottom: 40px;
 }
 
 .title h1 {
     font-size: 30px; 
     text-align: center; 
-    padding-bottom: 30px;
+    padding-bottom: 20px;
+}
+.slider{
+    overflow: hidden;
+    display: flex;
+    overflow-x: hidden;
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+
+}
+.slider ul{
+    display: flex;
+    width: 200%;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.mainprojbox{
+    display: flex;
+    justify-content: space-evenly;
+
+
+}
+.projdisplay{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.slider ul li{
+    list-style: none;
+    width: 50%;
+    padding: 20px;
+}
+.slide{
+    box-shadow: 10 10 10 10 #ffa200;
+    height: 400px;
+    width: 60%;
+    border-radius: 10px;
+    line-height: 1.4;
+    gap: 30px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-around;
+   
+}
+.content{
+    justify-content: space-evenly;
+    border: 2px solid #ffa200;
+    border-radius: 20px;
+    
+}
+.slide img{
+    
+    width: 100%;
+    border-radius: 50%;
+    margin-right: 10px;
+ 
+}
+
+.proj-info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size :15px;
+
+}
+.proj-info h3{
+    color:#212ea0;
+}
+.proj-info p{
+    font-size: 20px;
+    font-weight: 400;
+    color: #ffa200;
 }

@@ -1,0 +1,162 @@
+.allmain{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.contactheader {
+    display: flex;
+    padding-top: 50px;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    animation: slideInTop 1s ease-in-out forwards;
+}
+
+.title h1 {
+    font-size: 30px;
+    border-bottom: 2px solid #ffa200;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.contactmain {
+    width: 80%;
+    display: flex;
+    padding-left: 150px;
+    padding-top: 40px;
+    align-items: flex-start; 
+    margin-bottom: 40px;
+}
+
+.contactbox {
+    padding-right: 70px;
+    border-radius: 10px; 
+    text-align: center; 
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.send{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffa200;
+    width: 100px;
+    height: 50px;
+    color: white;
+    border-radius: 20px;
+}
+.send a{
+    text-align: center;
+    font-weight: 500;
+    font-size: 17px;
+    color: white;
+    padding-left: 15px;
+    padding-right: 5px;
+}
+.send img{
+    width: 30px;
+    padding-right: 15px;
+    height: 30px;
+}
+.context {
+    display: flex;
+    flex-direction: column;
+    gap: 23px; 
+}
+
+.context h1{
+    text-align: left;
+    font-size: 25px;
+    font-weight: 500;
+    color: #ffa200;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 20px; 
+}
+
+.textbox, .textarea {
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ffa200;
+   
+    width: 100%;
+    
+}
+
+
+.textbox:focus, .textarea:focus {
+    box-shadow: 1px 0px 30px rgba(255, 162, 0, 0.5);
+    outline: 1px solid #ffa200;
+    box-shadow: 0 0 15px rgb(226, 163, 55);
+}
+
+.contactinfo h1{
+    text-align: left;
+    font-size: 25px;
+    font-weight: 500;
+    color: #ffa200;
+    padding-bottom: 25px;
+}
+.contactinfo p{
+    font-size: 20px;
+    font-weight: 400;
+}
+.myname {
+   display: flex;
+   align-items: center;
+   gap:20px;
+
+}
+.myname img{
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+}
+.mail{
+    display: flex;
+}
+.mail img{
+    width: 40px;
+    align-items: center;
+    height: 40px;
+    padding-right: 20px;
+    border-radius: 5px;
+}
+.phone{
+    display: flex;
+    
+}
+.phone img{
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    padding-right: 20px;
+}
+.location{
+    display: flex;
+}
+
+.location img{
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    padding-right: 20px;
+}
+.socialmedia{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffa200;
+    height: 150px;
+    gap: 100px;
+}
+.socialicons{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}

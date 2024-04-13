@@ -1,7 +1,38 @@
+/* Keyframes for sliding in from left */
+@keyframes slideInLeft {
+  from {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+/* Keyframes for sliding in from right */
+@keyframes slideInRight {
+  from {
+      transform: translateX(100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
 .detail {
   margin-left: 80px;
   justify-content: space-between;
   margin-top: 8%;
+}
+.slide-in-left {
+  animation: slideInLeft 1s ease-in-out forwards;
+}
+
+.slide-in-right {
+  animation: slideInRight 1s ease-in-out forwards;
 }
 
 .container {
@@ -16,12 +47,14 @@
   flex-direction: row;
   padding-bottom:30px;
 }
+
 .hello{
   font-size: 28px;
   font-weight: 550;
 }
 
 .name {
+  margin-top: 0px;
   margin-bottom: 0px;
   color: #ffa200;
   font-size: 40px;
@@ -45,6 +78,7 @@
   animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
+
 @keyframes typing {
   from {
       width: 0;
@@ -61,7 +95,7 @@
       border-color: #ffa200; 
   }
   50% {
-      border-color: #ffa200; /* Shows the cursor */
+      border-color: #ffa200; 
   }
 }
 
@@ -70,20 +104,20 @@
 }
 
 .col p {
-  font-size: 15px;
+  font-size: 16px;
   margin-top: 5px;
 }
 
 .images {
   padding-left: 150px;
-  padding-right: 50px; 
+  padding-right: 20px; 
   margin-top: -70px; 
   height: 500px;
 }
 
 .orange{
   width: 550px;
-  right: 40px;
+  right: -10px;
   height: 500px;
   position: relative;
   bottom: -30px;
@@ -92,8 +126,8 @@
 
 .boy{
   position: relative;
-  bottom: 430px;
-  right: -30px;
+  bottom: 460px;
+  right: -70px;
   width: 450px;
   height: 460px;
 }
