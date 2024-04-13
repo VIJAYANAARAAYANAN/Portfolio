@@ -6,7 +6,7 @@ import About from './components/About/about'
 import Skill from './components/Skill/skill';
 import Project from './components/Project/project';
 import Contact from './components/Contact/contact';
-
+import Achievement from './components/Achievements/achievement';
 function App() {
   const [count, setCount] = useState(0);
 
@@ -15,8 +15,10 @@ function App() {
       <Header/>
       <About/>
       <Skill/>
+      <Achievement/>
       <Project/>
       <Contact/>
+      
     </>
   );
 }
