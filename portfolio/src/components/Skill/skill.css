@@ -131,6 +131,7 @@
     flex-direction: row;
     gap: 30px;
     justify-content: center;
+    padding-bottom: 30px;
     align-items: center;
 }
 
@@ -170,14 +171,7 @@
     flex-direction: column;
 }
 
-.techskills img {
-    padding-bottom: 20px;
-    align-items: center;
-    justify-content: center;
-    padding-right: 25px;
-     
-    padding-top: 10px;
-}
+
 
 .gitimg {
     width: 40px;
@@ -190,7 +184,14 @@
 }
 
 .subimgto {
-    gap: 40px;
+    display: flex;
+    align-content: center;
+    gap:20px;
     justify-content: space-around;
-   flex-direction: column;
+    flex-direction: row;
+}
+.subimgto img{
+    padding: 5px;
+    border: 1px solid #ffa200;
+    border-radius: 20%;
 }

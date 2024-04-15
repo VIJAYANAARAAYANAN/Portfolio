@@ -35,7 +35,6 @@ function Achievement() {
                 </button>
             </div>
 
-            {/* Conditionally render content based on selected tab */}
             <div className='content'>
                 {selectedTab === 'achievements' && (
                     <div>

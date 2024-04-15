@@ -13,11 +13,19 @@ function App() {
   return (
     <>
       <Header/>
-      <About/>
+      <div id = "about">
+        <About/>
+      </div>
       <Skill/>
       <Achievement/>
-      <Project/>
-      <Contact/>
+      <div id = "project">
+        <Project/>
+      </div>
+      
+      <div id="contact">
+      <Contact/>  
+      </div>
+  
       
     </>
   );

@@ -20,7 +20,7 @@
     left:0
 }
 .projheader {
-    padding-top: 60px;
+    padding-top: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,6 +39,7 @@
     overflow-x: hidden;
     display: flex;
     gap: 30px;
+    padding-bottom: 30px;
     justify-content: space-around;
 
 }

@@ -11,7 +11,7 @@ import express from '../../assets/exprs.png';
 import bootstrap from '../../assets/bootstrap.png';
 import mongo from '../../assets/mongo.png';
 import git from '../../assets/gitsmal.png';
-
+import mysql from '../../assets/mysql.png'
 function Skill() {
     // Ref for the skills section, including the header
     const skillsRef = useRef(null);
@@ -150,6 +150,7 @@ function Skill() {
                     <div className="subimgto">
                         <img src={mongo} alt="MongoDB" title="MongoDB" />
                         <img src={git} alt="Git" title="Git" />
+                        <img src={mysql} alt="SQL" title='MySql' />
                     </div>
                 </div>
             </div>
