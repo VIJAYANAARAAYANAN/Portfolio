@@ -35,7 +35,7 @@ function Achievement() {
                 </button>
             </div>
 
-            <div className='content'>
+            <div className='extracontent'>
                 {selectedTab === 'achievements' && (
                     <div>
                         <h2>Achievements</h2>
