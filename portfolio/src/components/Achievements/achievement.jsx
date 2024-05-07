@@ -37,7 +37,7 @@ function Achievement() {
 
             <div className='extracontent'>
                 {selectedTab === 'achievements' && (
-                    <div>
+                    <div className='achieve'>
                         <h2>Achievements</h2>
                         <div className='hacksus'>
                             <img src={hacksus} alt="hackathon" />
@@ -49,18 +49,21 @@ function Achievement() {
                     </div>
                 )}
                 {selectedTab === 'certificates' && (
-                    <div>
+                    <div className='certi'>
                         <h2>Certificates</h2>
                         <p>Display the content for achievements here...</p>
                     </div>
                 )}
                 {selectedTab === 'internships' && (
-                    <div>
-                        <h2>Internships</h2>
+                    <div className='achieve'>
+                        <h2>Internship</h2>
                         <div className='intern'>
-                            <img src={intern} alt="Internship" />
-                            <p><p>Display the content for achievements here...</p></p>
+                            <img src={intern} alt="hackathon" />
+                            <div className='interninfo'>
+                                <h1>HackSus Edition III</h1>
+                            </div>
                         </div>
+                       
                     </div>
                 )}
             </div>

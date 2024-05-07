@@ -18,7 +18,27 @@ function Contact() {
                     <h1>Get In  <span className="skillcolor">  Contact</span></h1>
                 </div>
             </div>
+            <div className='cmain'>
             <div className='contactmain'>
+            <div className='contactinfo'>
+                    <h1>Conatct Info</h1>
+                    <div className='myname'>
+                        <img src={user} alt="" />
+                        <p>Vijaya Naaraayanan</p>
+                    </div>
+                    <div className='myname'>
+                    <img src={phone} alt="" />
+                        <p>+91 8870589444</p>
+                    </div>
+                    <div className='myname'>
+                    <img src={mail} alt="" />
+                        <p>vijaybalaram05@gmail.com</p>
+                    </div>
+                    <div className='myname'>
+                    <img src={location} alt="" /> 
+                    <p>Coimbatore, TamilNadu, India.</p>
+                    </div>
+                </div>
                 <div className='contactbox'>
                     <div className='context'>
                         <h1>Contact Me</h1>
@@ -43,25 +63,8 @@ function Contact() {
                     </div>
                     
                 </div>
-                <div className='contactinfo'>
-                    <h1>Conatct Info</h1>
-                    <div className='myname'>
-                        <img src={user} alt="" />
-                        <p>Vijaya Naaraayanan</p>
-                    </div>
-                    <div className='myname'>
-                    <img src={phone} alt="" />
-                        <p>+91 8870589444</p>
-                    </div>
-                    <div className='myname'>
-                    <img src={mail} alt="" />
-                        <p>vijaybalaram05@gmail.com</p>
-                    </div>
-                    <div className='myname'>
-                    <img src={location} alt="" /> 
-                    <p>Coimbatore, TamilNadu, India.</p>
-                    </div>
-                </div>
+                
+            </div>
             </div>
             <div className='socialmedia'>
                 <div className='socialicons'>

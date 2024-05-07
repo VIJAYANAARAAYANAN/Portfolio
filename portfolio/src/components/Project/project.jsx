@@ -16,10 +16,7 @@ function Project() {
             <div className="slide">
               <div className="content">
                 <img src={sugoi} alt="Project Logo" />
-                <p>Ecommerce Application</p>
-                <div className='hovercontent'>
-                    <a href="">View more</a>
-                </div>
+                <p>Ecommerce Application</p>              
               </div>
             </div>
 
@@ -27,9 +24,7 @@ function Project() {
               <div className="content">
                 <img src={sugoi} alt="Project Logo" />
                 <p>Project 2</p>
-                <div className='hovercontent'>
-                    <a href="">View more</a>
-                </div>
+                
               </div>
             </div>
 
@@ -37,16 +32,24 @@ function Project() {
               <div className="content">
                 <img src={sugoi} alt="Project Logo" />
                 <p>Project 3</p>
-                <div className='hovercontent'>
-                    <a href="">View more</a>
-                </div>
+                
               </div>
             </div>
+            
+          </div>
+          <div className='detailbutton'>
+            <a href="/projdetail">View Details</a>
           </div>
         </div>
       </div>
+      
     </>
   );
 }
 
 export default Project;
+
+{/** <div className='hovercontent'>
+                    <a href="">View more</a>
+</div>*/
+}

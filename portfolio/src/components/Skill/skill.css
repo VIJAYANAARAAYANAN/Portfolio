@@ -72,10 +72,15 @@
     opacity: 1; 
     height: auto;
     margin-bottom: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .skill-icon {
     display: flex;
     align-items: center;
+    text-wrap: nowrap;
+    flex-wrap: nowrap;
 }
 
 .skill-icon img {
@@ -194,4 +199,168 @@
     padding: 5px;
     border: 1px solid #ffa200;
     border-radius: 20%;
+}
+
+@media screen and (max-width: 1000px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 5px;
+        column-gap:20px;
+        width: 80%; 
+    }
+    .skill-progress progress {
+        width: 80%;
+        height: 8px;
+        border-radius: 20px;
+        transition: width 1s linear; 
+    }
+    .techskills {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-top: 20px;
+        width: 60%;
+        font-size: 30px;
+        font-weight: 500;
+        text-align: center;
+        color: #ffa200;
+    }
+    
+    .techskills h {
+        border-bottom: 2px solid #ffa200;
+    }
+    .techskills h3{
+        font-size: 25px;
+        font-weight: 400;
+        border-bottom:2px solid #ffa200;
+    }
+    .techhead {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    
+    
+    .gitimg {
+        width: 30px;
+        height: 30px;
+    }
+    .techicon{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .subimgto {
+        display: flex;
+        align-content: center;
+        gap:10px;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+    .subimgto img{
+        padding: 5px;
+        border: 1px solid #ffa200;
+        border-radius: 20%;
+    }
+}
+@media screen and (max-width:500px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 5px;
+        column-gap:10px;
+        width: 100%; 
+        justify-content: center;
+        
+    }
+    .skill {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100%;
+        transform: translateY(20px); 
+        opacity: 0; 
+        justify-content: center;
+        justify-items: center;
+        transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    }
+    .skill-progress{
+        align-items: center;
+        justify-items: center;
+    }
+    
+    .skill.show {
+        transform: translateY(0); 
+        opacity: 1; 
+        height: auto;
+        margin-bottom: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .skill-progress progress {
+        width: 80%;
+        margin-left: 20px;
+        height: 8px;
+        display: flex;
+        justify-content: center;
+        border-radius: 20px;
+        transition: width 1s linear; 
+        text-align: center;
+    }
+    .skills-section{
+        display: flex;
+        align-items:flex-start ;
+        justify-content: space-evenly;
+
+    }
+    .skill-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .skill-icon img {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .skill-icon p {
+        font-size: 16px;
+        padding-left: 10px;
+        opacity: 5;  
+    }
+    .techskills h {
+        border-bottom: 3px solid #ffa200;
+    }
+    .techskills h3{
+        font-size:20px;
+        font-weight: 600;
+        padding-bottom: 10px;
+        border-bottom:2px solid #ffa200;
+    }
+    .techhead {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: fit-content;
+    }
+    .subimgto {
+        
+        display: flex;
+        align-content: center;
+        gap:10px;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+    .subimgto img{
+        width: 40px;
+        padding: 5px;
+        border: 1px solid #ffa200;
+        border-radius: 20%;
+    }
+    
 }

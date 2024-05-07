@@ -31,7 +31,6 @@ function Skill() {
                     skillElements.forEach((skillElement) => {
                         skillElement.classList.add('show');
                         
-                        // Animate progress bars
                         const progressBars = skillElement.querySelectorAll('progress');
                         progressBars.forEach((progressBar) => {
                             const targetValue = parseInt(progressBar.getAttribute('value'), 10);
@@ -99,7 +98,7 @@ function Skill() {
                         <div className="skill-icon">
                             <img src={html} alt="HTML Icon" />
                             <img src={css} alt="CSS Icon" />
-                            <p>HTML | CSS</p>
+                            <p>HTML|CSS</p>
                         </div>
                         <div className="skill-progress">
                             <progress value="80" max="100"></progress>
@@ -124,7 +123,7 @@ function Skill() {
                         <div className="skill-progress">
                             <progress value="90" max="100"></progress>
                         </div>
-                    </div>
+                 </div>
 
                     <div className="skill">
                         <div class="skill-icon">

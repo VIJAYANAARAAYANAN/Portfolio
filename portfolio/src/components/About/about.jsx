@@ -8,7 +8,7 @@ import Col from 'react-bootstrap/Col';
 import '../../components/About/about.css';
 import shape from '../../assets/shape.png';
 import mypic from '../../assets/mypic.png';
-import boy from '../../assets/boy.png'
+import boy from '../../assets/boynew.png'
 import '../About/typewriter'; 
 function ContainerExample() {
     const [textIndex, setTextIndex] = useState(0);
@@ -23,7 +23,9 @@ function ContainerExample() {
     }, []);
 
     return (
+        
         <Container className='detail'>
+        <div className='mainabout'>
             <Row className="container">
                 <Col className='col'>
                 <div className='col1 slide-in-left'>
@@ -36,24 +38,25 @@ function ContainerExample() {
                     </h3>
                     <p>As a MERN stack developer, I am committed to building high-quality web applications that meet the needs of my clients. With years of experience in full-stack web development, I specialize in using React.js, Next.js, TypeScript, MongoDB, Express.js, and Node.js to create scalable and robust web applications.</p>
                     <div className='rowbuttons'>
-                        <a href="#" className="resume">
+                        <a href="https://drive.google.com/file/d/1z2EPzW_8ND0UP0FSSyJgqSksN5df4han/view" target="_blank" download="VijayResume.pdf" className="resume">
                             <span>Resume</span>
                             <IonIcon icon={downloadOutline} className="download-icon" />
                         </a>
                         <a href="#">About Me</a>
                     </div>     
              
-             </div>   </Col>
-                <Col>
-                <div className='col1 slide-in-right'>
+             </div>   
+             </Col>
+                
+            <Col className='colimg'>
+                <div>
                     <div className='images'>
-                        <img className='orange' src={shape} alt='imageshape' />
-                        <img className='boy'   src={boy} alt="oby" />
-                        
+                        <img className='boy' src={shape} alt="oby" />
                     </div>
                     </div>
                 </Col>
             </Row>
+            </div>
         </Container>
     );
 }

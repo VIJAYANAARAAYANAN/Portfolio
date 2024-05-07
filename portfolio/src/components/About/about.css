@@ -23,9 +23,21 @@
 }
 
 .detail {
-  margin-left: 80px;
-  justify-content: space-between;
+  
+  width: 100%;
+  gap: 40px;
+  justify-content: space-evenly;
+  display: flex;
+  align-items: flex-start;
+  margin-top: 30px;
 
+}
+.mainabout{
+  width: 85%;
+  flex-direction: row;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
 .slide-in-left {
   animation: slideInLeft 1s ease-in-out forwards;
@@ -36,10 +48,9 @@
 }
 
 .container {
-  margin-top: 30px;
-  display: flex;
-  flex-direction: row;
-  padding-bottom: 30px;
+  gap:50px;
+width: auto;
+margin-bottom: 30px;
 }
 
 .Col {
@@ -47,6 +58,12 @@
   display: flex;
   flex-direction: row;
   padding-bottom:30px;
+}
+.col{
+  width: 60%;
+}
+.colimg{
+  width: 40%;
 }
 
 .hello{
@@ -109,28 +126,14 @@
   margin-top: 5px;
 }
 
-.images {
-  padding-left: 150px;
-  padding-right: 20px; 
-  margin-top: -70px; 
-  height: 500px;
+.images img {
+      width: 400px;
+      height: 450px;
 }
 
-.orange{
-  width: 550px;
-  right: -10px;
-  height: 500px;
-  position: relative;
-  bottom: -30px;
-
-}
 
 .boy{
-  position: relative;
-  bottom: 460px;
-  right: -70px;
-  width: 450px;
-  height: 460px;
+
 }
 
 .rowbuttons {
@@ -181,4 +184,105 @@
 
 .resume img{
   background-color: transparent;
+}
+
+@media screen and(max-width:1100) {
+  .images {
+    padding-left: 150px;
+    padding-right: 20px; 
+    margin-top: -70px; 
+    height: 300px;
+  }
+  .colimg{
+    display: none;
+  }
+  
+  .boy{
+    position: relative;
+    bottom: 340px;
+    right: -70px;
+    width: 350px;
+    height: 460px;
+  }
+  
+}
+@media screen and (max-width: 1000px) {
+  .images img {
+      width: 300px;
+      height:350px;
+  }
+}
+@media screen and (max-width:500px) {
+  .images {
+      display: none;
+      width: 0%;
+  }
+  .image img{
+    width: 50px;
+    height: 50px;
+  }
+  .col{
+    width: 110%;
+  }
+  .col1{
+    width: 100%;
+  }
+  .col h1 h2 {
+    margin-bottom: 5px;
+  }
+.container{
+  width: 100%;
+}
+  .col p {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  .hello{
+    font-size: 18px;
+    font-weight: 550;
+  }
+  
+  .name {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #ffa200;
+    font-size: 29px;
+  }
+  .colimg{
+    width: 0%;
+  }
+  .rowbuttons {
+    padding-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+    text-align: bottom;
+    border-radius: 30px;
+  }
+  
+  .rowbuttons a {
+    display: flex;
+    align-items: center;
+    background-color: #ffa200;
+    border: 5px solid #ffa200;
+    padding: 0;
+    margin-right: 20px;
+    font-size: 15px;
+    border-radius: 15px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .resume span {
+    margin-right: 1px; 
+    border-radius: 30px;
+  }
+  
+  .download-icon {
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s; 
+  }
+
 }

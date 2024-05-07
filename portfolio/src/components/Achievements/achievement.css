@@ -74,11 +74,17 @@
     border-radius: 50px;
     box-shadow:1px #ff3c00;
 }
+
 .intern{
     display: flex;
     flex-direction: row;
     justify-self: center;
     align-items: flex-start;
+}
+.interninfo h1{
+    color: #ffa200;
+    font-size: 30px;
+    font-weight: 400;
 }
 .intern img{
     width:350px;
@@ -86,4 +92,89 @@
     height: 340px;
     border-radius: 50px;
     box-shadow:1px #ff3c00;
+}
+@media screen and (max-width:500px) {
+    .mainthree{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .threebuttons {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 10px;
+        position: relative;
+        padding-bottom: 30px ;
+    }
+    
+    .threebuttons button {
+        padding: 6px;
+        border-radius: 10px;
+        font-size: 15px;
+        font-weight: 400;
+        color: white;
+        background-color: #ffa200;
+        border: none;
+        cursor: pointer;
+        outline: none;
+    }
+    
+    .threebuttons button.active {
+        color: #fff;
+        background-color: #ff8000;
+        box-shadow: 0px 3px 0px #ff3c00; 
+    }
+    
+    .threebuttons::after {
+        content: '';
+        position: absolute;
+        bottom: 0; 
+        height: 3px; 
+        width: 100px; /* Adjust this value to match the button width */
+        background-color: white;
+        left: calc(var(--underline-left, 0) * 100px + 10px); /* Adjust `100px` and `10px` as needed */
+        transition: left 0.3s ease-in-out, width 0.3s ease-in-out;
+    }
+    .extracontent{
+        width: 100%;
+    }
+    .extracontent h2{
+        color: #ff8000;
+        font-size: 20px;
+        text-decoration: underline;
+    }
+    .hacksus{
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        align-items: center;
+    }
+    .hackinfo h1{
+        color: #ffa200;
+        font-size: 20px;
+        font-weight: 300;
+    }
+    .hacksus img{
+        width:330px;
+        padding:10px 10px 10px 10px;
+        height: 300px;
+        border-radius: 50px;
+        box-shadow:1px #ff3c00;
+    }
+    .hubintern{
+        display: flex;
+        flex-direction: row;
+        justify-self: center;
+        align-items: center;
+    }
+    .hubintern h2{
+        text-align: center;
+    }
+    .hubintern img{
+        width:350px;
+        padding:30px 30px 30px 30px;
+        height: 340px;
+        border-radius: 50px;
+        box-shadow:1px #ff3c00;
+    }
 }

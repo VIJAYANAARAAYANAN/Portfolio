@@ -39,13 +39,13 @@
     overflow-x: hidden;
     display: flex;
     gap: 30px;
-    padding-bottom: 30px;
+    width: 80%;
     justify-content: space-around;
 
 }
 .slider ul{
     display: flex;
-    width: 200%;
+    width: 90%;
     overflow-x: hidden;
     transition: 0.5s;
 }
@@ -53,13 +53,29 @@
 .mainprojbox{
     display: flex;
     justify-content: space-evenly;
-
+    flex-direction: column;
 
 }
 .projdisplay{
     display: flex;
     width: 100%;
+    align-items: center;
+    flex-direction: column;
     justify-content: space-around;
+}
+.detailbutton{
+    display: flex;
+    align-items: flex-end;
+    background-color: #ffa200;
+    border-radius: 20px;
+}
+.detailbutton a{    
+    color: #fff;
+    font-size: 20px;
+    border: 1px solid #ffa200;
+    border-radius: 20px;
+    text-decoration: none;
+    padding: 5px;
 }
 .slider ul li{
     list-style: none;
@@ -101,12 +117,11 @@
     color: #ffa200;
 }
 
-
 .hovercontent {
     opacity: 0;
     transition:  0.3s ease-in-out;
     position: absolute;
-    background-color: #ffa200;
+    background-color: #dd8c00;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -119,15 +134,77 @@
 
 .hovercontent a{
     color: #fff;
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 27px;
+    font-weight: 500;
     padding: 10px;
     border: 4px solid #fff;
     text-decoration: none;
     border-radius: 20px;
-    
 }
 
 .content:hover .hovercontent {
-    opacity: 0.80;
+    opacity: 0.90;
+}
+@media screen and (max-width:900px) {
+    .content p{
+        font-size: 15px;
+        font-weight: 400;
+        color: #000;
+    }
+}
+@media screen and (max-width:500px){
+    .content{
+        border: 2px solid #ffa200;
+        border-radius: 20px;
+        display: flex;
+        height: 80%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .content img{
+        margin-right: 0px;
+    }
+    .slide{
+        box-shadow: 10 30 30 30 #ffa200;
+        height: 180px;
+        width: 340px;
+        border-radius: 10px;
+        line-height: 1.4;
+        border-radius: 50px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+       
+    }
+    .slider{
+        width: 90%;
+        padding-bottom: 10px;
+    }
+    .slide img{
+        width: 80%;
+        border-radius: 50%;
+     
+    }
+    .content p{
+        font-size: 10px;
+        font-weight: 400;
+        text-align: center;
+        color: #ffa200;
+        text-align: bottom;
+    }
+    .detailbutton{
+        display: flex;
+        align-items: flex-end;
+        background-color: #ffa200;
+        border-radius: 20px;
+    }
+    .detailbutton a{    
+        color: #fff;
+        font-size: 15px;
+        border: 1px solid #ffa200;
+        border-radius: 20px;
+        text-decoration: none;
+        padding: 5px;
+    }
 }

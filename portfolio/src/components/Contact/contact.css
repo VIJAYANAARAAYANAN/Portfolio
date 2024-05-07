@@ -18,13 +18,15 @@
     text-align: center;
     padding-bottom: 10px;
 }
-
+.cmain{
+    display: flex;
+    justify-content: center;
+}
 .contactmain {
     width: 80%;
     display: flex;
-    padding-left: 150px;
     padding-top: 40px;
-    align-items: flex-start; 
+    align-items: center;
     margin-bottom: 40px;
 }
 
@@ -93,7 +95,9 @@
     outline: 1px solid #ffa200;
     box-shadow: 0 0 15px rgb(226, 163, 55);
 }
-
+.contactinfo{
+    padding-right: 38px;
+}
 .contactinfo h1{
     text-align: left;
     font-size: 25px;
@@ -160,3 +164,81 @@
     justify-content: center;
     align-items: center;
 }
+@media screen and (max-width:500px) {
+    .cmain{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .contactmain{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 4px;
+       
+    }
+     .contactinfo{
+        padding-right: 0;
+     }  
+    .contactinfo h1{
+        padding-bottom: 10px;
+        text-align: center;
+        margin-top: 0;
+        padding-bottom: 0;
+
+    }
+    .contactbox{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-right: 0%;
+        width: 90%;
+    }
+    .context{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    } 
+    .context h1{
+        text-align: center;
+    }.row {
+        display: flex;
+        flex-direction: row;
+        gap: 20px; 
+    }
+    
+    .textbox, .textarea {
+        padding:14px;
+        height: 10px;
+        border-radius: 10px;
+        border: 1px solid #ffa200;
+        width: 100%;
+    }
+    .send{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffa200;
+        width:100px;
+        height:30px;
+        color: white;
+        border-radius: 20px;
+    }
+    .send a{
+        text-align: center;
+        font-weight: 500;
+        font-size: 17px;
+        color: white;
+        padding-left: 15px;
+        padding-right: 5px;
+    }
+    .send img{
+        width: 30px;
+        padding-right: 15px;
+        height: 30px;
+    }
+}
+    
